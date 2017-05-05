@@ -6,11 +6,11 @@
 [![Project Status: WIP - Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip)
 [![bitHound Code](https://www.bithound.io/github/tribou/jest-serializer-path/badges/code.svg)](https://www.bithound.io/github/tribou/jest-serializer-path)
 
-Remove absolute filepaths out of your Jest snapshots.
+Remove absolute paths from your Jest snapshots.
 
 #### Quick Start
 
-```
+```bash
 npm install --save-dev jest-serializer-path
 ```
 
@@ -21,12 +21,12 @@ Add this to your `package.json` Jest config:
   "snapshotSerializers": [
     "jest-serializer-path"
   ]
-},
+}
 ```
 
 Or include only in individual tests:
 
-```
+```js
 const serializer = require('jest-serializer-path')
 
 expect.addSnapshotSerializer(serializer)
