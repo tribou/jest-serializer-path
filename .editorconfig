@@ -1,0 +1,24 @@
+# editorconfig.org
+root = true
+
+[*]
+# Essential for clean git diffs
+indent_style = space
+indent_size = 2
+# Essential for Windows-Unix compatible git diffs
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.md]
+# Two trailing spaces in a Markdown file acts as a newline and is more
+# compatible across platforms such as GitHub and Bitbucket
+trim_trailing_whitespace = false
+indent_size = 4
+
+[Makefile]
+# Makefiles need tabs for best experience
+indent_style = tab
+# Four-spaced indents are more readable for Makefile targets
+indent_size = 4

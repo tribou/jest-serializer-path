@@ -1,0 +1,49 @@
+{
+  "name": "jest-serializer-path",
+  "version": "0.0.1",
+  "description": "",
+  "author": "tribou",
+  "license": "Apache-2.0",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=6.4.0 <7",
+    "npm": ">=3.10.3 <4"
+  },
+  "homepage": "https://github.com/tribou/jest-serializer-path#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tribou/jest-serializer-path.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tribou/jest-serializer-path/issues"
+  },
+  "keywords": [
+    "jest",
+    "serializer"
+  ],
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "code": "^4.0.0",
+    "coveralls": "^2.11.14",
+    "eslint": "^3.11.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-config-tribou": "^3.0.0",
+    "eslint-plugin-flowtype": "^2.28.2",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-react": "^6.7.1",
+    "eslint-plugin-standard": "^2.0.1",
+    "lab": "^11.1.0",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {},
+  "scripts": {
+    "deploy": "",
+    "cover": "npm test -- -s -r lcov | coveralls",
+    "lint": "eslint --cache --ignore-path .gitignore .",
+    "test": "lab -c -L -v -a code -t 100 -P '_test' lib",
+    "watch": "nodemon -x npm test"
+  }
+}
