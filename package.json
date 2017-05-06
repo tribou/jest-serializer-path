@@ -42,8 +42,9 @@
   "scripts": {
     "deploy": "",
     "cover": "npm test -- -s -r lcov | coveralls",
-    "lint": "eslint --cache --ignore-path .gitignore .",
-    "test": "lab -c -L -v -a code -t 100 -P '_test' lib",
+    "lab": "lab -c -L -v -a code -t 100 -P '_test' lib",
+    "lint": "eslint --ignore-path .gitignore .",
+    "test": "npm run lint",
     "watch": "nodemon -x npm test"
   }
 }
