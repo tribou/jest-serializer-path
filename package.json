@@ -27,8 +27,8 @@
     "coveralls": "^2.13.1",
     "eslint": "^3.16.0",
     "eslint-plugin-flowtype": "^2.34.0",
-    "eslint-plugin-tribou": "^1.0.4",
-    "lab": "^14.0.1",
+    "eslint-plugin-tribou": "^1.0.5",
+    "lab": "^14.1.0",
     "nodemon": "^1.11.0"
   },
   "dependencies": {},
