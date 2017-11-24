@@ -38,10 +38,11 @@
     "verbose": true,
     "testRegex": "/(lib)/.*_test\\.js$",
     "snapshotSerializers": [
+      "./"
     ]
   },
   "scripts": {
-    "lint": "eslint --ignore-path .gitignore --ignore-path .eslintignore .",
+    "lint": "eslint --ignore-path .gitignore lib",
     "test-jest": "cross-env NODE_ENV=test jest --coverage",
     "test": "npm run --silent lint && npm run --silent test-jest",
     "watch": "npm run test-jest -- --watch",
