@@ -1,7 +1,7 @@
 # jest-serializer-path
 
 [![npm version](https://badge.fury.io/js/jest-serializer-path.svg)](https://badge.fury.io/js/jest-serializer-path)
-[![Build Status](https://travis-ci.org/tribou/jest-serializer-path.svg?branch=master)](https://travis-ci.org/tribou/jest-serializer-path)
+[![CircleCI](https://circleci.com/gh/tribou/jest-serializer-path.svg?style=svg)](https://circleci.com/gh/tribou/jest-serializer-path)
 [![Coverage Status](https://coveralls.io/repos/github/tribou/jest-serializer-path/badge.svg?branch=master)](https://coveralls.io/github/tribou/jest-serializer-path?branch=master)
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![bitHound Code](https://www.bithound.io/github/tribou/jest-serializer-path/badges/code.svg)](https://www.bithound.io/github/tribou/jest-serializer-path)
@@ -30,4 +30,23 @@ Or include only in individual tests:
 const serializer = require('jest-serializer-path')
 
 expect.addSnapshotSerializer(serializer)
+```
+
+All absolute paths will now be converted and saved in snapshots like so:
+
+`/path/to/my-proj/lib` => `<PROJECT_ROOT>/lib`
+
+#### Build
+
+This project bundles the yarn executable and the npm/yarn dependencies offline
+in the `.npm-packages-offline-cache` directory for faster dependency installs
+and better dev/prod parity across including preventing failure if yarn/npm is
+offline.
+
+```sh
+# Install
+npm run yarn
+
+# Run tests
+npm run test
 ```
