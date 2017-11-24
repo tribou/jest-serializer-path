@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`replaces __dirname with <PROJECT_ROOT> 1`] = `
+Object {
+  "__dirname": "/Users/tribou/dev/jest-serializer-path/lib",
+}
+`;

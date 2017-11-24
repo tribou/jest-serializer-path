@@ -1,0 +1,51 @@
+version: 2
+jobs:
+  node-6:
+    working_directory: ~/app
+    docker:
+      - image: circleci/node:6
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "yarn.lock" }}
+      - run:
+          name: yarn
+          command: npm run yarn
+      - save_cache:
+          key: dependency-cache-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules
+      - run:
+          name: lint
+          command: npm run lint
+      - run:
+          name: test-jest
+          command: npm run test-jest -- --runInBand
+
+  node-8:
+    working_directory: ~/app
+    docker:
+      - image: circleci/node:8
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "yarn.lock" }}
+      - run:
+          name: yarn
+          command: npm run yarn
+      - save_cache:
+          key: dependency-cache-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules
+      - run:
+          name: lint
+          command: npm run lint
+      - run:
+          name: test-jest
+          command: npm run test-jest -- --runInBand
+workflows:
+  version: 2
+  build-test-and-bump-version:
+    jobs:
+      - node-6
+      - node-8
