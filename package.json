@@ -26,6 +26,10 @@
     "jest",
     "serializer"
   ],
+  "files": [
+    "lib/",
+    "yarn.lock"
+  ],
   "devDependencies": {
     "babel-eslint": "^8.0.2",
     "coveralls": "^3.0.0",
