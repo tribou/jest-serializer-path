@@ -28,6 +28,7 @@
   ],
   "devDependencies": {
     "babel-eslint": "^8.0.2",
+    "coveralls": "^3.0.0",
     "cross-env": "^5.1.1",
     "eslint": "^3.16.0",
     "eslint-plugin-tribou": "^1.0.5",
@@ -35,6 +36,7 @@
   },
   "dependencies": {},
   "jest": {
+    "collectCoverage": true,
     "verbose": true,
     "testRegex": "/(lib)/.*_test\\.js$",
     "snapshotSerializers": [
@@ -42,8 +44,9 @@
     ]
   },
   "scripts": {
+    "coverage": "coveralls < coverage/lcov.info",
     "lint": "eslint --ignore-path .gitignore lib",
-    "test-jest": "cross-env NODE_ENV=test jest --coverage",
+    "test-jest": "cross-env NODE_ENV=test jest",
     "test": "npm run --silent lint && npm run --silent test-jest",
     "watch": "npm run test-jest -- --watch",
     "yarn": "npm run --silent yarn-bin -- install --prefer-offline",

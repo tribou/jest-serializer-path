@@ -21,6 +21,9 @@ jobs:
       - run:
           name: test-jest
           command: npm run test-jest -- --runInBand
+      - run:
+          name: report-coverage
+          command: npm run coverage
 
   node-8:
     working_directory: ~/app
@@ -43,9 +46,13 @@ jobs:
       - run:
           name: test-jest
           command: npm run test-jest -- --runInBand
+      - run:
+          name: report-coverage
+          command: npm run coverage
+
 workflows:
   version: 2
-  build-test-and-bump-version:
+  test:
     jobs:
       - node-6
       - node-8
