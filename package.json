@@ -1,6 +1,6 @@
 {
   "name": "jest-serializer-path",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Remove absolute paths from your Jest snapshots",
   "author": "tribou",
   "license": "Apache-2.0",
