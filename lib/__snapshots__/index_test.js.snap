@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`preserves path directories after the <PROJECT_ROOT> 1`] = `"<PROJECT_ROOT>/src/somewhere"`;
+exports[`serializer preserves path directories after the <PROJECT_ROOT> 1`] = `"<PROJECT_ROOT>/src/somewhere"`;
 
-exports[`replaces __dirname with <PROJECT_ROOT> 1`] = `"<PROJECT_ROOT>"`;
+exports[`serializer replaces __dirname with <PROJECT_ROOT> 1`] = `"<PROJECT_ROOT>"`;
 
-exports[`replaces __dirname with <PROJECT_ROOT> in Object properties 1`] = `
+exports[`serializer replaces __dirname with <PROJECT_ROOT> in Object properties 1`] = `
 Object {
   "myPath": "<PROJECT_ROOT>/src",
 }
 `;
 
-exports[`replaces every instance of __dirname in the same string 1`] = `
+exports[`serializer replaces every instance of __dirname in the same string 1`] = `
 Object {
   "PATH": "<PROJECT_ROOT>/path:<PROJECT_ROOT>/another/path",
   "script": "const myPath = <PROJECT_ROOT>/path;
@@ -18,4 +18,4 @@ Object {
 }
 `;
 
-exports[`supports trailing slashes in the path 1`] = `"<PROJECT_ROOT>/path/with/trailing/slash/"`;
+exports[`serializer supports trailing slashes in the path 1`] = `"<PROJECT_ROOT>/path/with/trailing/slash/"`;
