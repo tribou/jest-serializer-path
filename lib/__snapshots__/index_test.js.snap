@@ -18,4 +18,10 @@ Object {
 }
 `;
 
+exports[`serializer replaces process.cwd with <PROJECT_ROOT> in array 1`] = `
+Array [
+  "<PROJECT_ROOT>/src",
+]
+`;
+
 exports[`serializer supports trailing slashes in the path 1`] = `"<PROJECT_ROOT>/path/with/trailing/slash/"`;
