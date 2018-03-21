@@ -24,4 +24,6 @@ Array [
 ]
 `;
 
+exports[`serializer replaces process.cwd with <PROJECT_ROOT> in an Error 1`] = `[Error: some error in <PROJECT_ROOT>/a/path]`;
+
 exports[`serializer supports trailing slashes in the path 1`] = `"<PROJECT_ROOT>/path/with/trailing/slash/"`;
