@@ -1,7 +1,8 @@
 # jest-serializer-path
 
 [![npm version](https://badge.fury.io/js/jest-serializer-path.svg)](https://badge.fury.io/js/jest-serializer-path)
-[![CircleCI](https://circleci.com/gh/tribou/jest-serializer-path.svg?style=svg)](https://circleci.com/gh/tribou/jest-serializer-path)
+[![Linux Build Status](https://img.shields.io/circleci/project/github/tribou/jest-serializer-path/master.svg?label=linux%20build)](https://circleci.com/gh/tribou/jest-serializer-path/tree/master)
+[![Windows Build Status](https://img.shields.io/appveyor/ci/tribou/jest-serializer-path/master.svg?label=windows%20build)](https://ci.appveyor.com/project/tribou/jest-serializer-path/branch/master)
 [![Coverage Status](https://coveralls.io/repos/github/tribou/jest-serializer-path/badge.svg?branch=master)](https://coveralls.io/github/tribou/jest-serializer-path?branch=master)
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![bitHound Code](https://www.bithound.io/github/tribou/jest-serializer-path/badges/code.svg)](https://www.bithound.io/github/tribou/jest-serializer-path)
