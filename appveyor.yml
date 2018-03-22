@@ -4,14 +4,13 @@ environment:
     - nodejs_version: '8'
 install:
   - ps: Install-Product node $env:nodejs_version
-  - yarn install
+  - npm run yarn
 matrix:
   fast_finish: true
 build: off
 shallow_clone: true
 test_script:
   - node --version
-  - yarn --version
-  - yarn test
+  - npm run test
 cache:
   - "%LOCALAPPDATA%\\Yarn"
