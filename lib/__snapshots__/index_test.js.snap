@@ -2,19 +2,19 @@
 
 exports[`serializer preserves path directories after the <PROJECT_ROOT> 1`] = `"<PROJECT_ROOT>/src/somewhere"`;
 
-exports[`serializer replaces __dirname with <PROJECT_ROOT> 1`] = `"<PROJECT_ROOT>"`;
-
-exports[`serializer replaces __dirname with <PROJECT_ROOT> in Object properties 1`] = `
-Object {
-  "myPath": "<PROJECT_ROOT>/src",
-}
-`;
-
-exports[`serializer replaces every instance of __dirname in the same string 1`] = `
+exports[`serializer replaces every instance of process.cwd in the same string 1`] = `
 Object {
   "PATH": "<PROJECT_ROOT>/path:<PROJECT_ROOT>/another/path",
   "script": "const myPath = <PROJECT_ROOT>/path;
       const mySecondPath = <PROJECT_ROOT>/another/path;",
+}
+`;
+
+exports[`serializer replaces process.cwd with <PROJECT_ROOT> 1`] = `"<PROJECT_ROOT>"`;
+
+exports[`serializer replaces process.cwd with <PROJECT_ROOT> in Object properties 1`] = `
+Object {
+  "myPath": "<PROJECT_ROOT>/src",
 }
 `;
 
