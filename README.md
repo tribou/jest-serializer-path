@@ -7,7 +7,10 @@
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![bitHound Code](https://www.bithound.io/github/tribou/jest-serializer-path/badges/code.svg)](https://www.bithound.io/github/tribou/jest-serializer-path)
 
-Remove absolute paths from your Jest snapshots.
+Remove absolute paths and normalize paths across all platforms in your Jest snapshots.
+
+> NOTE: All single backslashes ("\\") will be replaced by a forward slash ("/").
+ Also, any string that looks like a Windows drive letter ("C:\\") will be replaced by a forward slash ("/").
 
 #### Quick Start
 
