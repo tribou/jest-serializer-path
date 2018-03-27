@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`serializer handles process.chdir <PROJECT_ROOT> 1`] = `"<PROJECT_ROOT>/src/somewhere"`;
+
 exports[`serializer preserves path directories after the <PROJECT_ROOT> 1`] = `"<PROJECT_ROOT>/src/somewhere"`;
 
 exports[`serializer replaces every instance of process.cwd in the same string 1`] = `
@@ -18,12 +20,12 @@ Object {
 }
 `;
 
+exports[`serializer replaces process.cwd with <PROJECT_ROOT> in an Error 1`] = `[Error: some error in <PROJECT_ROOT>/a/path]`;
+
 exports[`serializer replaces process.cwd with <PROJECT_ROOT> in array 1`] = `
 Array [
   "<PROJECT_ROOT>/src",
 ]
 `;
-
-exports[`serializer replaces process.cwd with <PROJECT_ROOT> in an Error 1`] = `[Error: some error in <PROJECT_ROOT>/a/path]`;
 
 exports[`serializer supports trailing slashes in the path 1`] = `"<PROJECT_ROOT>/path/with/trailing/slash/"`;
