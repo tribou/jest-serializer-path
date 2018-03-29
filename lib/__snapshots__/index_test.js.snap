@@ -1,5 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`serializer handles an assortment of nested objects 1`] = `
+Object {
+  "nested": Object {
+    "arr": Array [
+      "<PROJECT_ROOT>/arr",
+      Object {
+        "arrPath": "<PROJECT_ROOT>/arrPath",
+      },
+    ],
+    "myPath": "<PROJECT_ROOT>/src",
+  },
+}
+`;
+
+exports[`serializer handles path inside string without process.cwd 1`] = `"long string /root/src/somewhere path"`;
+
 exports[`serializer handles process.chdir <PROJECT_ROOT> 1`] = `"<PROJECT_ROOT>/src/somewhere"`;
 
 exports[`serializer preserves path directories after the <PROJECT_ROOT> 1`] = `"<PROJECT_ROOT>/src/somewhere"`;
@@ -27,5 +43,7 @@ Array [
   "<PROJECT_ROOT>/src",
 ]
 `;
+
+exports[`serializer replaces process.cwd with <PROJECT_ROOT> when inside string 1`] = `"long string <PROJECT_ROOT>/src/somewhere path"`;
 
 exports[`serializer supports trailing slashes in the path 1`] = `"<PROJECT_ROOT>/path/with/trailing/slash/"`;
