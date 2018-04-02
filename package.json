@@ -44,7 +44,8 @@
     "testResultsProcessor": "jest-junit",
     "snapshotSerializers": [
       "./"
-    ]
+    ],
+    "resetModules": true
   },
   "scripts": {
     "coverage": "coveralls < coverage/lcov.info",

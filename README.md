@@ -9,9 +9,6 @@
 
 Remove absolute paths and normalize paths across all platforms in your Jest snapshots.
 
-> NOTE: All single backslashes ("\\") will be replaced by a forward slash ("/").
- Also, any string that looks like a Windows drive letter ("C:\\") will be replaced by a forward slash ("/").
-
 #### Quick Start
 
 ```bash
@@ -39,6 +36,15 @@ expect.addSnapshotSerializer(serializer)
 All absolute paths will now be converted and saved in snapshots like so:
 
 `/path/to/my-proj/lib` => `<PROJECT_ROOT>/lib`
+
+``/path/to/os-temp/nested/temp`` => ``<TEMP_DIR>/nested/temp``
+
+``/path/to/user-home/nested/home`` => ``<HOME_DIR>/nested/home``
+
+#### Caveats
+
+* All single backslashes (`\`) will be replaced by a forward slash (`/`).
+* Any string that looks like a Windows drive letter (`C:\`) will be replaced by a forward slash (`/`).
 
 #### Build
 

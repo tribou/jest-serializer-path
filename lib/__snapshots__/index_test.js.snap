@@ -20,6 +20,14 @@ exports[`serializer handles process.chdir <PROJECT_ROOT> 1`] = `"<PROJECT_ROOT>/
 
 exports[`serializer preserves path directories after the <PROJECT_ROOT> 1`] = `"<PROJECT_ROOT>/src/somewhere"`;
 
+exports[`serializer replaces all roots 1`] = `
+Object {
+  "cwd": "<PROJECT_ROOT>/nested/cwd",
+  "home": "<HOME_DIR>/nested/home",
+  "temp": "<TEMP_DIR>/nested/temp",
+}
+`;
+
 exports[`serializer replaces every instance of process.cwd in the same string 1`] = `
 Object {
   "PATH": "<PROJECT_ROOT>/path:<PROJECT_ROOT>/another/path",
