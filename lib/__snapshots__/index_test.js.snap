@@ -1,5 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`serializer handle NaN 1`] = `NaN`;
+
+exports[`serializer handle boolean 1`] = `true`;
+
+exports[`serializer handle date 1`] = `2018-01-01T00:00:00.000Z`;
+
+exports[`serializer handle function 1`] = `[Function]`;
+
+exports[`serializer handle null 1`] = `null`;
+
+exports[`serializer handle number 1`] = `1`;
+
+exports[`serializer handle promise 1`] = `Promise {}`;
+
+exports[`serializer handle regex 1`] = `/-/`;
+
+exports[`serializer handle undefined 1`] = `undefined`;
+
 exports[`serializer handles an assortment of nested objects 1`] = `
 Object {
   "nested": Object {
