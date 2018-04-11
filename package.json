@@ -45,7 +45,9 @@
     "snapshotSerializers": [
       "./"
     ],
-    "resetModules": true
+    "resetModules": true,
+    "resetMocks": true,
+    "restoreMocks": true
   },
   "scripts": {
     "coverage": "coveralls < coverage/lcov.info",
