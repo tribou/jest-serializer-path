@@ -29,9 +29,9 @@
     "babel-eslint": "^8.0.2",
     "coveralls": "^3.0.0",
     "cross-env": "^5.1.1",
-    "eslint": "^3.16.0",
+    "eslint": "^4.19.1",
     "eslint-plugin-tribou": "^1.0.5",
-    "jest": "^21.2.1",
+    "jest": "^22.4.3",
     "jest-junit": "^3.3.0"
   },
   "dependencies": {
@@ -54,6 +54,6 @@
     "test": "npm run --silent lint && npm run --silent test-jest",
     "watch": "npm run test-jest -- --watch",
     "yarn": "npm run --silent yarn-bin -- install --prefer-offline",
-    "yarn-bin": "node bin/yarn-1.3.2.js"
+    "yarn-bin": "node bin/yarn-1.5.1.js"
   }
 }
