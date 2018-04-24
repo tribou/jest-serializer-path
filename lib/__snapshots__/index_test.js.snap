@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`serializer errors are immutable 1`] = `[Error: <PROJECT_ROOT>/error-message]`;
+
 exports[`serializer handle NaN 1`] = `NaN`;
 
 exports[`serializer handle boolean 1`] = `true`;
@@ -35,6 +37,20 @@ Object {
 exports[`serializer handles path inside string without process.cwd 1`] = `"long string /root/src/somewhere path"`;
 
 exports[`serializer handles process.chdir <PROJECT_ROOT> 1`] = `"<PROJECT_ROOT>/src/somewhere"`;
+
+exports[`serializer is immutable 1`] = `
+Object {
+  "nested": Object {
+    "arr": Array [
+      "<PROJECT_ROOT>/arr",
+      Object {
+        "arrPath": "<PROJECT_ROOT>/arrPath",
+      },
+    ],
+    "myPath": "<PROJECT_ROOT>/src",
+  },
+}
+`;
 
 exports[`serializer preserves path directories after the <PROJECT_ROOT> 1`] = `"<PROJECT_ROOT>/src/somewhere"`;
 

@@ -35,6 +35,8 @@
     "jest-junit": "^3.3.0"
   },
   "dependencies": {
+    "lodash.clonedeep": "^4.5.0",
+    "lodash.iserror": "^3.1.1",
     "slash": "^2.0.0"
   },
   "jest": {
