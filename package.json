@@ -35,6 +35,8 @@
     "jest-junit": "^3.3.0"
   },
   "dependencies": {
+    "lodash.clonedeep": "^4.5.0",
+    "lodash.iserror": "^3.1.1",
     "slash": "^2.0.0"
   },
   "jest": {
@@ -54,6 +56,6 @@
     "test": "npm run --silent lint && npm run --silent test-jest",
     "watch": "npm run test-jest -- --watch",
     "yarn": "npm run --silent yarn-bin -- install --prefer-offline",
-    "yarn-bin": "node bin/yarn-1.5.1.js"
+    "yarn-bin": "node bin/yarn-1.6.0.js"
   }
 }
