@@ -56,6 +56,6 @@
     "test": "npm run --silent lint && npm run --silent test-jest",
     "watch": "npm run test-jest -- --watch",
     "yarn": "npm run --silent yarn-bin -- install --prefer-offline",
-    "yarn-bin": "node bin/yarn-1.5.1.js"
+    "yarn-bin": "node bin/yarn-1.6.0.js"
   }
 }
