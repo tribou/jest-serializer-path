@@ -31,6 +31,7 @@
     "cross-env": "^5.1.1",
     "eslint": "^4.19.1",
     "eslint-plugin-tribou": "^1.0.5",
+    "fs-extra": "^5.0.0",
     "jest": "^22.4.3",
     "jest-junit": "^3.3.0"
   },
