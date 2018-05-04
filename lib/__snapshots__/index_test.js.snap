@@ -54,6 +54,15 @@ Object {
 
 exports[`serializer preserves path directories after the <PROJECT_ROOT> 1`] = `"<PROJECT_ROOT>/src/somewhere"`;
 
+exports[`serializer replace all roots inside map 1`] = `
+Map {
+  "isMap" => true,
+  "cwd" => "<PROJECT_ROOT>/nested/cwd",
+  "home" => "<HOME_DIR>/nested/home",
+  "temp" => "<TEMP_DIR>/nested/temp",
+}
+`;
+
 exports[`serializer replaces all roots 1`] = `
 Object {
   "cwd": "<PROJECT_ROOT>/nested/cwd",
