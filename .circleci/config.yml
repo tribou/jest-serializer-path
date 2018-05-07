@@ -59,9 +59,41 @@ jobs:
       - store_artifacts:
           path: reports/junit
 
+  node-10:
+    working_directory: ~/app
+    docker:
+      - image: circleci/node:10
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "yarn.lock" }}
+      - run:
+          name: yarn
+          command: npm run yarn
+      - save_cache:
+          key: dependency-cache-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules
+      - run:
+          name: lint
+          command: npm run lint
+      - run:
+          name: test-jest
+          command: npm run test-jest -- --ci
+          environment:
+            JEST_JUNIT_OUTPUT: "reports/junit/js-test-results.xml"
+      - run:
+          name: report-coverage
+          command: npm run coverage
+      - store_test_results:
+          path: reports/junit
+      - store_artifacts:
+          path: reports/junit
+
 workflows:
   version: 2
   test:
     jobs:
       - node-6
       - node-8
+      - node-10
