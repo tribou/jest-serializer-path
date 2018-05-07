@@ -1,6 +1,7 @@
 ---
 extends:
   - plugin:tribou/recommended
+  - prettier
 
 plugins:
   - tribou
