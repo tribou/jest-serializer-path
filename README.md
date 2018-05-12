@@ -28,23 +28,23 @@ Add this to your `package.json` Jest config:
 Or include only in individual tests:
 
 ```js
-const serializer = require('jest-serializer-path')
+const serializer = require("jest-serializer-path");
 
-expect.addSnapshotSerializer(serializer)
+expect.addSnapshotSerializer(serializer);
 ```
 
 All absolute paths will now be converted and saved in snapshots like so:
 
 `/path/to/my-proj/lib` => `<PROJECT_ROOT>/lib`
 
-``/path/to/os-temp/nested/temp`` => ``<TEMP_DIR>/nested/temp``
+`/path/to/os-temp/nested/temp` => `<TEMP_DIR>/nested/temp`
 
-``/path/to/user-home/nested/home`` => ``<HOME_DIR>/nested/home``
+`/path/to/user-home/nested/home` => `<HOME_DIR>/nested/home`
 
 #### Caveats
 
-* All single backslashes (`\`) will be replaced by a forward slash (`/`).
-* Any string that looks like a Windows drive letter (`C:\`) will be replaced by a forward slash (`/`).
+*   All single backslashes (`\`) will be replaced by a forward slash (`/`).
+*   Any string that looks like a Windows drive letter (`C:\`) will be replaced by a forward slash (`/`).
 
 #### Build
 
