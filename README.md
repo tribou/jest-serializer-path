@@ -41,6 +41,8 @@ All absolute paths will now be converted and saved in snapshots like so:
 
 `/path/to/user-home/nested/home` => `<HOME_DIR>/nested/home`
 
+`/path/to/my-proj/node_modules/some-package/` => `<NODE_MODULES>/some-package/`
+
 #### Caveats
 
 *   All single backslashes (`\`) will be replaced by a forward slash (`/`).
