@@ -90,6 +90,13 @@ Object {
 
 exports[`serializer replaces process.cwd with <PROJECT_ROOT> 1`] = `"<PROJECT_ROOT>"`;
 
+exports[`serializer replaces process.cwd with <PROJECT_ROOT> in Object key 1`] = `
+Object {
+  "<PROJECT_ROOT>/nested/cwd": "is root",
+  "fake": "value",
+}
+`;
+
 exports[`serializer replaces process.cwd with <PROJECT_ROOT> in Object properties 1`] = `
 Object {
   "myPath": "<PROJECT_ROOT>/src",
